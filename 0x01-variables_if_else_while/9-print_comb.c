@@ -1,24 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - Print comb of signle-digit num
+ * main - Print all possible combinations of single-digit numbers
  *
  * Return: 0
  */
 int	main(void)
 {
-	char	ch;
+	int	n;
 
-	ch = '0';
-	while (ch <= '9')
+	n = 0;
+	while (n <= 9)
 	{
-		putchar(ch);
-		if (ch < '9')
+		putchar(n + 48);
+		if (n < 9)
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		ch++;
+		n++;
 	}
 	putchar('\n');
 	return (0);
