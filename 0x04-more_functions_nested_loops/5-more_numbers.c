@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -19,5 +20,5 @@ void more_numbers(void)
 		}
 		n++;
 	}
-	_putchar('\n');
+	write(1, "\n", 1);
 }
