@@ -7,18 +7,24 @@
 void more_numbers(void)
 {
 	int		n;
+	int		i;
 
-	n = 0;
-	while (n <= 14)
+	i = 0;
+	while (i < 10)
 	{
-		if (n <= 9)
-			_putchar(n + 48);
-		else
+		n = 0;
+		while (n <= 14)
 		{
-			_putchar(n / 10 + 48);
-			_putchar(n % 10 + 48);
+			if (n <= 9)
+				putchar(n + 48);
+			else
+			{
+				putchar(n / 10 + 48);
+				putchar(n % 10 + 48);
+			}
+			n++;
 		}
-		n++;
+		putchar('\n');
+		i++;
 	}
-	write(1, "\n", 1);
 }
