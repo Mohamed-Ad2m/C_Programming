@@ -2,7 +2,7 @@
 
 /**
  * print_square - Prints a square, followed by newline
- * @size: The number of times the character # should be printed
+ * @size: is the size of the square
  */
 void print_square(int size)
 {
