@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * print_square - Prints a square, followed by newline
  * @size: The number of times the character # should be printed
@@ -15,12 +15,12 @@ void print_square(int size)
 		j = 0;
 		while (j < size)
 		{
-			putchar('#');
+			_putchar('#');
 			j++;
 		}
-		putchar('\n');
+		_putchar('\n');
 		i++;
 	}
 	if (size <= 0)
-		putchar('\n');
+		_putchar('\n');
 }
