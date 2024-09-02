@@ -1,4 +1,4 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
  * print_triangle - Prints a triangle, followed by newline
@@ -17,18 +17,18 @@ void print_triangle(int size)
 		while (j < size)
 		{
 			if (j > i)
-				_putchar(' ');
+				write(1, " ", 1);
 			j++;
 		}
 		k = 0;
 		while (k <= i)
 		{
-			_putchar('#');
+			write(1, "#", 1);
 			k++;
 		}
-		_putchar('\n');
+		write(1, "\n", 1);
 		i++;
 	}
 	if (size <= 0)
-		_putchar('\n');
+		write(1, "\n", 1);
 }
