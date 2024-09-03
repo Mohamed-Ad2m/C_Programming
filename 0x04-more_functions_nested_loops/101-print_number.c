@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * print_number - Print integer number
  *
@@ -12,11 +12,11 @@ void print_number(int n)
 	nb = n;
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		print_number(-nb);
 	}
 	else if (n < 10)
-		putchar(nb + 48);
+		_putchar(nb + 48);
 	else if (n >= 10)
 	{
 		print_number(nb / 10);
