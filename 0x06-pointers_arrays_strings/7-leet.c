@@ -7,21 +7,22 @@
 char *leet(char *s)
 {
 	int		i;
-	char	*leet = "aAeEoOtTlL";
-	char	*t = "4433007711";
+	int		j;
+	char	leet[] = "aAeEoOtTlL";
+	char	t[] = "4433007711";
 
 	i = 0;
 	while (s[i])
 	{
-		while (*leet)
+		j = 0;
+		while (leet[j])
 		{
-			if (s[i] == *leet)
+			if (s[i] == leet[j])
 			{
-				s[i] = *t;
+				s[i] = t[j];
 				break;
 			}
-			leet++;
-			t++;
+			j++;
 		}
 		i++;
 	}
