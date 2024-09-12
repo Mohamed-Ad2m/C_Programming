@@ -6,7 +6,9 @@
  */
 int		is_char_or_num(char c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
@@ -21,6 +23,8 @@ char *cap_string(char *s)
 {
 	int		first;
 	int		i;
+	int		j;
+	char	*sep = " \t\n,.;!?(){}";
 
 	i = 0;
 	first = 0;
@@ -37,7 +41,18 @@ char *cap_string(char *s)
 				first = 1;
 		}
 		else
-			first = 0;
+		{
+			j = 0;
+			while (sep[j])
+			{
+				if (s[i] == sep[j])
+				{
+					break;
+					first = 0;
+				}
+				j++;
+			}
+		}
 		i++;
 	}
 	return (s);
