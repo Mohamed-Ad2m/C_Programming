@@ -2,7 +2,7 @@
  * is_char_or_num - Check wether a character is a letter or digit
  * @c: Character
  *
- * Return: 1 if @c is a letter of digit, 0 otherwise
+ * Return: 1 if @c is a letter or digit, 0 otherwise
  */
 int		is_char_or_num(char c)
 {
@@ -47,8 +47,8 @@ char *cap_string(char *s)
 			{
 				if (s[i] == sep[j])
 				{
-					break;
 					first = 0;
+					break;
 				}
 				j++;
 			}
